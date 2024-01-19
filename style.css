@@ -1,0 +1,125 @@
+body {
+    background-color: #e5e9ee;
+    font-family: 'Roboto', sans-serif;
+    color: #2c5e90;
+    font-size: 18px;
+}
+
+/* Adjust the top padding when the navbar is fixed */
+@media (min-width: 992px) {
+    body {
+        /* padding-top: 80px; */
+    }
+}
+
+
+
+#hero {
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+
+/* Navbar styles */
+.navbar {
+    background-color: #2c5e90;
+    /* height: 20%; */
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: #fefefe;
+    font-weight: 700; /* Make the font bold */
+    font-size: 18px; /* Adjust the font size as needed */
+    font-weight: 700;
+    text-align: center; /* Center the text */
+}
+
+.navbar-brand:hover,
+.navbar-nav .nav-link:hover {
+    color: rgba(116, 120, 253, 0.963);
+}
+
+#burger-img {
+    border-color: #27537f;
+    margin-right: 3rem;
+}
+
+
+/* .c-item {
+    height: 480px;
+} */
+.c-item {
+    height: 100vh;
+
+}
+
+.c-img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+
+/* Custom styles for the About Section */
+
+#about {
+    background-image: url('./static/images/about_us_img.jpg');
+    background-size: cover;
+    background-position: center;
+    color:white;
+    text-align: center;
+    padding: 100px 0;
+
+    background-color: rgba(0, 0, 0, 0.293);
+    background-blend-mode: overlay;
+}
+
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color:#2c5e90;
+    color: white;
+  }
+
+/* .card {
+    margin-bottom: 3rem;
+} */
+
+@media screen and (min-width: 1400px) {
+    #about, #services, #contact {
+        height: 100vh; /* Adjust as needed for content */
+        padding-top: 70px;
+    }
+  }
+  @media screen and (min-width: 1600px) {
+    #about, #services, #contact {
+        height: 100vh; /* Adjust as needed for content */
+        padding-top: 70px;
+    }
+  }
+  @media screen and (min-width: 1900px) {
+    #about, #services, #contact {
+        height: 100vh; /* Adjust as needed for content */
+        padding-top: 70px;
+    }
+  }
+
+  .button-call {
+    width: 30px;
+  }
+
+  .fixed-button {
+    position: fixed;
+    bottom: 20px; /* Adjust the value as needed */
+    right: 20px; /* Adjust the value as needed */
+}
+
+  
+
+
+
+
+
