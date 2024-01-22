@@ -76,3 +76,7 @@ const closeNavBar = (e) => {
 
 burgerMenu.addEventListener('click', (e) => closeNavBar(e))
 
+
+
+
+

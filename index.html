@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>RP Boatworks</title>
     
+    <link rel="icon" href="./static/images/Logo.png"type="image/x-icon">
+    
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
@@ -62,7 +64,7 @@
     <div class="carousel-inner">
         <!-- Slide 1 (Active) -->
         <div class="carousel-item active c-item">
-            <img src="./static/images/craig-cameron-J7wc9brCLBs-unsplash.jpg" class="d-block w-100 c-img" alt="First Slide">
+            <img src="./static/images/donald-giannatti-QsBdlSS17ro-unsplash.jpg" class="d-block w-100 c-img" alt="First Slide" loading="lazy">
             <!-- You can add a caption or additional content here if needed -->
             <div class="carousel-caption d-flex flex-column">
                 <!-- <button class="btn btn-primary fixed-button" onclick="callPhoneNumber('+123456789')">Call Us Now</button> -->
@@ -73,7 +75,7 @@
 
         <!-- Slide 2 -->
         <div class="carousel-item c-item text-center">
-            <img src="./static/images/gunnar-ridderstrom-oqZO73glQjM-unsplash.jpg" class="d-block w-100 c-img" alt="Second Slide">
+            <img src="./static/images/gunnar-ridderstrom-oqZO73glQjM-unsplash.jpg" class="d-block w-100 c-img" alt="Second Slide" loading="lazy">
             <div class="carousel-caption d-flex flex-column">
                 <!-- <button class="btn btn-primary fixed-button" onclick="callPhoneNumber('+123456789')">Call Us Now</button> -->
                 <h1 class="font-weight-bold">RP Boatworks</h1>
@@ -104,7 +106,7 @@
                     <!-- Service Card 1 -->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card" style="width: 18rem; height: 500px; margin: 0 auto;">
-                            <img class="card-img-top" src="./static/images/1stService.jpg" alt="Service 1" style="height: 200px; object-fit: cover; margin-bottom: 15px;">
+                            <img class="card-img-top" src="./static/images/1stService.jpg" alt="Service 1" style="height: 200px; object-fit: cover; margin-bottom: 15px;" loading="lazy">
                             <div class="card-body">
                                 <h5 class="card-title font-weight-bold">Hull Inspection and Repair</h5>
                                 <p class="card-text">
@@ -116,7 +118,7 @@
                     <!-- Service Card 2 -->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card" style="width: 18rem; height: 500px; margin: 0 auto;">
-                            <img class="card-img-top" src="./static/images/engine.jpg" alt="Service 2" style="height: 200px; object-fit: cover; margin-bottom: 15px;">
+                            <img class="card-img-top" src="./static/images/engine.jpg" alt="Service 2" style="height: 200px; object-fit: cover; margin-bottom: 15px;" loading="lazy">
                             <div class="card-body">
                                 <h5 class="card-title font-weight-bold">Engine Maintenance and Repairs</h5>
                                 <p class="card-text">
@@ -128,7 +130,7 @@
                     <!-- Service Card 3 -->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card" style="width: 18rem; height: 500px; margin: 0 auto;">
-                            <img class="card-img-top" src="./static/images/3rdService_v2.jpg" alt="Service 3" style="height: 200px; object-fit: cover; margin-bottom: 15px;">
+                            <img class="card-img-top" src="./static/images/3rdService_v2.jpg" alt="Service 3" style="height: 200px; object-fit: cover; margin-bottom: 15px;" loading="lazy">
                             <div class="card-body">
                                 <h5 class="card-title font-weight-bold">Gelcoat Restoration and Finishing</h5>
                                 <p class="card-text">
@@ -218,7 +220,9 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <!-- Contact Form -->
-                        <form id="contactForm">
+                        <form id="contactForm"
+                            action="https://formspree.io/f/xzbndzpb"
+                            method="POST">
                             <!-- Name Input -->
                             <div class="form-group">
                                 <label for="name" class="sr-only">Your Name:</label>
