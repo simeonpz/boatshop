@@ -1,13 +1,11 @@
 $(document).ready(function(){
-
     //globalscript
     // Function to close the navbar for mobile view
     function closeNavbar() {
         $(".navbar-toggler").addClass("collapsed");
         $("#navbarResponsive").removeClass("show");
     }
-
-    
+ 
     $("#burger-img").on('click', function() {
         $("#navbarResponsive").collapse('toggle');
     });
@@ -41,14 +39,7 @@ $(document).ready(function(){
             } // End if
         });
     }
-
-
-    
-
 });
-
-
-
 
 function callPhoneNumber(phoneNumber) {
     // Use the 'tel:' protocol to initiate a phone call
@@ -71,3 +62,17 @@ window.addEventListener('hashchange', function() {
     var currentSection = window.location.hash;
     console.log('Current section:', currentSection);
 });
+
+const navBar = document.getElementById('navbarResponsive')
+const burgerMenu = document.getElementById('burger-img')
+
+const closeNavBar = (e) => {
+    e.preventDefault()
+
+    if (navBar.classList.contains('show')) {
+        navBar.classList.remove('show')
+    }
+}
+
+burgerMenu.addEventListener('click', (e) => closeNavBar(e))
+
