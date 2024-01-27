@@ -10,6 +10,13 @@
         
         <!-- Custom styles -->
         <link rel="stylesheet" href="style.css">
+
+        <!-- swiper script -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Swiper Lib -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
         
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
         <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
@@ -40,6 +47,27 @@
         </ul>
     </div>
 </nav>
+
+<!-- test image with swipe -->
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+          <img src="./static/images/3rdService.jpg" alt="Before Image" height="300px" width="auto">
+      </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+          <img src="./static/images/1stService.jpg" alt="After Image" height="300px" width="auto">
+      </div>
+      <!-- Add more slides as needed -->
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+
+</div>
+
 
     <!-- Gallery -->
 <div id="gallery" class="row mt-5 pt-5" >
@@ -101,5 +129,6 @@
           <!-- Additional footer content or links can be added here -->
       </div>
   </footer>
+
 </body>
 </html>
