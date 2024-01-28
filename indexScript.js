@@ -77,19 +77,11 @@ const closeNavBar = (e) => {
 burgerMenu.addEventListener('click', (e) => closeNavBar(e))
 
 
-const swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-});
-
-
+// gallery effects
+const container = document.querySelector('.container-special');
+console.log(container);
+document.querySelector('.slider').addEventListener('input', (e) => {
+  container.style.setProperty('--position', `${e.target.value}%`);
+})
 
 

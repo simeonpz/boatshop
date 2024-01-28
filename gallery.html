@@ -4,20 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>RP Boatworks Gallery</title>
-        
+        <link rel="icon" href="./static/images/Logo.png"type="image/x-icon">
+
         <!-- Bootstrap CSS -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
         
         <!-- Custom styles -->
         <link rel="stylesheet" href="style.css">
 
-        <!-- swiper script -->
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-        <!-- Swiper Lib -->
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-        
+     
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
         <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
@@ -26,7 +21,9 @@
 <body>
     <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-md fixed-top">
-    <a class="navbar-brand ml-5" href="index.html">RP Boatworks</a>
+    <a class="navbar-brand" href="index.html#hero">
+      <img class="logo-img" src="./static/images/Logo-removebg-preview.png" alt="logo" height="65px" width="auto">
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"><img src="./static/images/burger-v2.png" alt="" id="burger-img" height="30px" width="30px"></span>
     </button>
@@ -49,34 +46,96 @@
 </nav>
 
 <!-- test image with swipe -->
-<div class="swiper-container">
-  <div class="swiper-wrapper">
-      <!-- Slide 1 -->
-      <div class="swiper-slide">
-          <img src="./static/images/3rdService.jpg" alt="Before Image" height="300px" width="auto">
-      </div>
-      <!-- Slide 2 -->
-      <div class="swiper-slide">
-          <img src="./static/images/1stService.jpg" alt="After Image" height="300px" width="auto">
-      </div>
-      <!-- Add more slides as needed -->
-  </div>
-  <!-- Add Pagination -->
-  <div class="swiper-pagination"></div>
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-
-</div>
-
 
     <!-- Gallery -->
 <div id="gallery" class="row mt-5 pt-5" >
     <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-      <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-        class="w-100 shadow-1-strong rounded mb-4"
-        alt="Boat on Calm Water"
-      />
+      <main class="pt-5">
+        <div class="container-special" id="container-special-1">
+          <div class="image-container">
+            <img
+              class="image-before slider-image"
+             src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+              alt="color photo"
+            />
+            <img
+              class="image-after slider-image"
+              src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+              alt="black and white"
+            />
+          </div>
+          <!-- step="10" -->
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            aria-label="Percentage of before photo shown"
+            class="slider"
+          />
+          <div class="slider-line" aria-hidden="true"></div>
+          <div class="slider-button" aria-hidden="true">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+            >
+              <rect width="256" height="256" fill="none"></rect>
+              <line
+                x1="128"
+                y1="40"
+                x2="128"
+                y2="216"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              ></line>
+              <line
+                x1="96"
+                y1="128"
+                x2="16"
+                y2="128"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              ></line>
+              <polyline
+                points="48 160 16 128 48 96"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              ></polyline>
+              <line
+                x1="160"
+                y1="128"
+                x2="240"
+                y2="128"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              ></line>
+              <polyline
+                points="208 96 240 128 208 160"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              ></polyline>
+            </svg>
+          </div>
+        </div>
+      </main>
   
       <img
         src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
@@ -112,7 +171,7 @@
         alt="Yosemite National Park"
       />
     </div>
-  </div>
+</div>
   <!-- Gallery -->
   
   <!-- Use the standard version of jQuery -->
@@ -126,7 +185,6 @@
   <footer class="text-right py-3">
       <div class="container">
           <p>&copy; 2023 RP Boatworks</p>
-          <!-- Additional footer content or links can be added here -->
       </div>
   </footer>
 
