@@ -1,19 +1,44 @@
 $(document).ready(function(){
     //globalscript
     // Function to close the navbar for mobile view
-    function closeNavbar() {
-        $(".navbar-toggler").addClass("collapsed");
-        $("#navbarResponsive").removeClass("show");
-    }
+    // function closeNavbar() {
+    //     $(".navbar-toggler").addClass("collapsed");
+    //     $("#navbarResponsive").removeClass("show");
+    // }
  
-    $("#burger-img").on('click', function() {
-        $("#navbarResponsive").collapse('toggle');
-    });
+    // $("#burger-img").on('click', function() {
+    //     $("#navbarResponsive").collapse('toggle');
+    // });
 
-    // Close the navbar when a menu item is clicked (for mobile view)
-    $(".navbar-nav").on('click', 'a', function() {
-        closeNavbar();
-    });
+    // // Close the navbar when a menu item is clicked (for mobile view)
+    // $(".navbar-nav").on('click', 'a', function() {
+    //     closeNavbar();
+    // });
+
+   // Variable to track the navbar state
+   var navbarOpen = false;
+
+   // Function to close the navbar for mobile view
+   function closeNavbar() {
+       $("#navbarResponsive").removeClass("show");
+       navbarOpen = false;
+   }
+
+   // Toggle the navbar collapse state when burger menu is clicked
+   $("#burger-img").on('click', function() {
+       if (navbarOpen) {
+           closeNavbar();
+       } else {
+           $("#navbarResponsive").addClass("show");
+           navbarOpen = true;
+       }
+   });
+
+   // Close the navbar when a menu item is clicked (for mobile view)
+   $(".navbar-nav").on('click', 'a', function() {
+       closeNavbar();
+   });
+    
 
     if (document.URL.includes('index.html')) {
         // Add smooth scrolling to all links
@@ -83,5 +108,11 @@ console.log(container);
 document.querySelector('.slider').addEventListener('input', (e) => {
   container.style.setProperty('--position', `${e.target.value}%`);
 })
+
+
+
+function callPhoneNumber(phoneNumber) {
+    window.location.href = 'tel:' + phoneNumber;
+}
 
 

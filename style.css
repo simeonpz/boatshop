@@ -269,3 +269,72 @@ main {
   /* z-index: 100; */
   box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
 }
+
+/* Sticky button styles */
+.sticky-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #28a745; /* Green color */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 9999; /* Increased z-index */
+}
+.sticky-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+
+.social-link {
+  color: #a4303d;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.social-link:hover {
+  text-decoration: none;
+  color: #c14150;
+}
+
+.contact-link {
+  color: #a4303d;
+  transition: background-color 0.3s ease;
+}
+
+.contact-link:hover {
+  text-decoration: none;
+  color: #c14150;
+}
+
+.navbar-toggler:focus {
+  outline: none; /* Remove the default focus outline */
+}
+
+/* Add this CSS to your stylesheet */
+.img-container img {
+  transition: transform 0.3s ease; /* Add transition */
+}
+
+.img-container img:hover {
+  transform: scale(1.1); /* Increase the scale on hover */
+}
+
+
+.polished-buffed-container {
+  border: 2px solid #4c5762;
+  border-radius: 90px;
+}
+
+
+
+
+
