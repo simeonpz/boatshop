@@ -96,7 +96,8 @@ body {
 /* Custom styles for the About Section */
 
 #about {
-    background-image: url('./static/images/about_us_img.jpg');
+    /* background-image: url('./static/images/about_us_img.jpg'); */
+    background-image: url('./static/images/about_section_image.jpg');
     background-size: cover;
     background-position: center;
     color:white;
@@ -335,6 +336,9 @@ main {
 }
 
 
-
-
-
+/* services section height setup for 6 cards */
+#services {
+  height: 200vh; /* Set the height to 200 viewport heights */
+  padding-top: 60px; /* Optional: Adjust the padding as needed */
+  padding-bottom: 60px; /* Optional: Adjust the padding as needed */
+}

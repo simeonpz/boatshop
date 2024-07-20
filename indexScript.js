@@ -116,3 +116,16 @@ function callPhoneNumber(phoneNumber) {
 }
 
 
+// form submit clear
+    // Function to refresh the page
+function refreshPage() {
+    window.location.reload();
+}
+
+// Check if the page was loaded after form submission
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('submitted')) {
+        refreshPage();
+    }
+}
