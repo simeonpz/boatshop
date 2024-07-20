@@ -333,6 +333,7 @@ main {
 .polished-buffed-container {
   border: 2px solid #4c5762;
   border-radius: 90px;
+  width: max-content;
 }
 
 
