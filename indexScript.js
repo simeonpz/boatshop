@@ -1,6 +1,39 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Variable to track the navbar state
+    let navbarOpen = false;
 
+    // Function to close the navbar for mobile view
+    function closeNavbar() {
+        const navbar = document.getElementById('navbarResponsive');
+        if (navbar) {
+            navbar.classList.remove('show');
+        }
+        navbarOpen = false;
+    }
 
+    // Toggle the navbar collapse state when burger menu is clicked
+    const burgerImg = document.getElementById('burger-img');
+    if (burgerImg) {
+        burgerImg.addEventListener('click', function() {
+            const navbar = document.getElementById('navbarResponsive');
+            if (navbar) {
+                if (navbarOpen) {
+                    closeNavbar();
+                } else {
+                    navbar.classList.add('show');
+                    navbarOpen = true;
+                }
+            }
+        });
+    }
+
+    // Close the navbar when a menu item is clicked (for mobile view)
+    const navLinks = document.querySelectorAll('.navbar-nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            closeNavbar();
+        });
+    });
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(link => {

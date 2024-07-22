@@ -11,7 +11,7 @@ body {
 }
 
 
-
+html { scroll-padding-top: 125px; }
 
 /* Adjust the top padding when the navbar is fixed */
 @media (min-width: 992px) {
