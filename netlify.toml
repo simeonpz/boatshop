@@ -1,0 +1,35 @@
+# Static site, no build step. Netlify publishes the repo root as-is.
+# Clean URLs (/gallery -> gallery.html) are handled by Netlify's Pretty URLs setting.
+[build]
+  publish = "."
+
+# Long cache for images; HTML stays fresh.
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/static/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Old .html URLs -> clean URLs (avoids duplicate content in search)
+[[redirects]]
+  from = "/gallery.html"
+  to = "/gallery"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
