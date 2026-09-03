@@ -2,6 +2,13 @@
    Type: Barlow Condensed (display) + Barlow (text)
    Palette: hull black, charcoal, slate, fog, brand red (from the logo) */
 
+/* Self-hosted fonts (latin subsets from Google Fonts, OFL licence) */
+@font-face { font-family: "Barlow Condensed"; font-style: normal; font-weight: 600; font-display: swap; src: url("/static/fonts/BarlowCondensed-600.woff2") format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-style: normal; font-weight: 700; font-display: swap; src: url("/static/fonts/BarlowCondensed-700.woff2") format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: normal; font-weight: 400; font-display: swap; src: url("/static/fonts/Barlow-400.woff2") format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: normal; font-weight: 500; font-display: swap; src: url("/static/fonts/Barlow-500.woff2") format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: normal; font-weight: 600; font-display: swap; src: url("/static/fonts/Barlow-600.woff2") format("woff2"); }
+
 :root {
   --ink: #15191d;
   --char: #262c33;
@@ -64,6 +71,22 @@ a:hover { color: var(--red-deep); }
   outline: 3px solid var(--red);
   outline-offset: 3px;
 }
+
+/* Skip link: visible only on keyboard focus */
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 100;
+  background: var(--red);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 3px;
+}
+.skip:focus { top: 1rem; }
 
 .wrap {
   width: min(100% - 2 * var(--gutter), var(--wrap));
@@ -217,7 +240,7 @@ a:hover { color: var(--red-deep); }
   max-width: 14ch;
   margin-bottom: 1.5rem;
 }
-.hero .lede { margin-bottom: 2.25rem; }
+.hero .lede { margin-bottom: 2.25rem; color: var(--mist); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; }
 
 .hero__photo { position: relative; overflow: hidden; }
@@ -418,7 +441,7 @@ a:hover { color: var(--red-deep); }
 .field input:focus, .field textarea:focus { border-color: var(--mist); outline: none; box-shadow: 0 0 0 3px rgba(164, 48, 61, 0.45); }
 .field textarea { min-height: 9rem; resize: vertical; }
 .form .btn { justify-self: start; margin-top: 0.25rem; }
-.form-note { font-size: 0.9rem; color: var(--slate); }
+.form-note { font-size: 0.9rem; color: var(--mist); }
 .honey { position: absolute; left: -9999px; }
 
 .details { display: grid; gap: 1.75rem; align-content: start; }
@@ -440,7 +463,7 @@ a:hover { color: var(--red-deep); }
 /* ---------- Footer ---------- */
 .site-footer {
   background: var(--ink);
-  color: var(--slate);
+  color: var(--mist);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 2rem 0 calc(2rem + var(--callbar-h, 0px));
   font-size: 0.95rem;
